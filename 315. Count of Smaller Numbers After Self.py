@@ -11,3 +11,4 @@ def countSmaller(nums):
 
 nums = [5, 2, 6, 1]
 print(countSmaller(nums))
+
