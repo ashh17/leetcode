@@ -11,4 +11,3 @@ def countSmaller(nums):
 
 nums = [5, 2, 6, 1]
 print(countSmaller(nums))
-# its in the order of n^2, need to improve it
