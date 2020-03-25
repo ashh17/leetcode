@@ -1,23 +1,18 @@
-from collections import Counter
-
-
 def majorityElement(nums) -> int:
-    return max(Counter(nums))
+    count, item = 0, None
+    for num in nums:
+        if count == 0:
+            item = num
+        if item == num:
+            count += 1
+        else:
+            count -= 1
+    return item
 
 
 print(majorityElement([3, 4, 3]) == 3)
 print(majorityElement([2, 2, 1, 1, 1, 2, 2]) == 2)
-# print(majorityElement([3, 3, 4] == 3))
-
-# def majorityElement(nums) -> int:
-#     d = {}
-#     for x in nums:
-#         if x in d:
-#             d[x] += 1
-#         else:
-#             d[x] = 1
-#     return max(d.keys())
-
+print(majorityElement([3, 3, 4]) == 3)
 
 # Example 1:
 #
